@@ -1,0 +1,16 @@
+kdec(){
+	local device_name="$(kdeconnect-cli --list-devices | awk --assign dev_id="${_KDECONNECT_DEFAULT_DEVICE}" -F'[-|:|(|)]' '$(NF - 1) == "paired and reachable" && $(NF - 2) ~ dev_id {print $2}')"
+	if [[ -z "${device_name}" ]]; then
+		echo It seems the default device configured with the env variable _KDECONNECT_DEFAULT_DEVICE \(${_KDECONNECT_DEFAULT_DEVICE}\) is not reachable or not paired > /dev/stderr
+		return
+	else
+		echo Using device:${device_name}
+	fi
+	kdeconnect-cli --device ${_KDECONNECT_DEFAULT_DEVICE} $@
+}
+
+
+sms(){
+${_KDECONNECT_DEFAULT_DEVICE}
+	echo ${_KDECONNECT_DEFAULT_DEVICE}
+}
