@@ -22,3 +22,4 @@ sms(){
 # The mistake is the way kdec() receive arguments: it uses $@ to connect the function itself with whatever arguments it needs; however, when passing arguments to kdec() from sms(),
 # the kdec() can only receive the first field of messege text.
 # I have not figured out the reason yet.
+# vim:  syn=bash
