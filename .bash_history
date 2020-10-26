@@ -1545,3 +1545,18 @@ kdec --send-sms "hello how are you doing? fkejfhefe" --destination 07472358837
 kdec --send-sms "hello, how are you doing? fkejfhefe" --destination 07472358837
 source .bash_funcs
 kdec
+sms 07472358837 hello. how are you doing
+ls
+vim .bash_funcs 
+source .bash_funcs
+sms
+source .bash_funcs
+sms
+source .bash_funcs
+sms
+source .bash_funcs
+sms
+source .bash_funcs
+sms
+sms 07472358837
+sms 07472358837 are you ok my friend?

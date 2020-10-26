@@ -1,3 +1,24 @@
+usage(){
+   # Display Help
+   echo "Sending SMS Syntax:"
+   echo
+   echo "sms [phone_number] <messege>"
+   echo
+}
+
+error_msg(){
+echo
+echo " X     X"
+echo "  X   X "
+echo "   X X  "
+echo "    X   " 
+echo "   X X  "
+echo "  X   X "
+echo " X     X"
+echo
+}
+
+
 sms(){
 	local device_name_and_id="$(kdeconnect-cli --list-devices | awk -F'[-|:|(|)]' '$(NF-1) == "paired and reachable" {print $2","$3}')"
 	local device_name device_id
@@ -10,12 +31,17 @@ sms(){
 		echo Using device:${device_name}
 	fi
 	
-	local phone_number="$1"
-	shift
-	local msg="$@"
+	if [[ $# -le 1 ]]; then
+  		error_msg
+		usage
+	else
+		local phone_number="$1"
+		shift
+		local msg="$@"
 
-	kdeconnect-cli --device ${device_id} --send-sms "${msg}" --destination "${phone_number}" 	
-	echo Sent SMS Message To ${phone_number} 
+		kdeconnect-cli --device ${device_id} --send-sms "${msg}" --destination "${phone_number}" 	
+		echo Sent SMS Message To ${phone_number} 
+	fi
 }
 
 # A funny mistake happens when I was trying to use kdec() + sms() as described at https://github.com/doronbehar/dotfiles/blob/fef1b6f1e332e75312f491788ae1caae5f832314/.functions
