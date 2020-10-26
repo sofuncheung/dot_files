@@ -1382,3 +1382,166 @@ vim .bash_funcs
 sms
 source .bash_funcs 
 sms
+echo $PATH
+echo $LOGNAME
+echo $MAIL
+env
+kdec
+kdeconnect-cli -l
+awk --assign
+vim /dev/stderr 
+cd /dev/
+pwd
+cd ..
+ls
+cd dev/
+ls
+vim stderr 
+ll
+la 
+la stderr
+cd stderr
+ls
+ll stderr
+vim stderr 
+cd -
+cd ..
+ls
+cd ~
+vim .bashrc 
+kdeconnect-cli -l
+awk --assign
+source .bash_funcs
+kde
+kdec
+source .bash_funcs
+kdec
+source .bash_funcs
+kdec
+kdeconnect-cli -l
+source .bash_funcs
+kdeconnect-cli -l
+kdec
+source .bash_funcs
+kdec
+source .bash_funcs
+kdec
+source .bash_funcs
+kdec
+source .bash_funcs
+kdec
+source .bash_funcs
+kdec
+source .bash_funcs
+kdec
+source .bash_funcs
+kdec
+source .bash_funcs
+kdec
+kdeconnect-cli -l
+source .bash_funcs
+kdec
+kdeconnect-cli --list-devices | awk -F'[-|:|(|)| ]' '$(NF-1) == "paired and reachable" {print $2,$3}'
+kdeconnect-cli --list-devices | awk -F'[-|:|(|)|]' '$(NF-1) == "paired and reachable" {print $2,$3}'
+kdeconnect-cli --list-devices | awk -F'[-|:|(|)|]' '$(NF-1) == "paired and reachable" {print $2}'
+kdeconnect-cli --list-devices | awk -F'[-|:|(|)|]' '$(NF-1) == "paired and reachable" {print $1}'
+kdeconnect-cli --list-devices | awk -F'[-|:|(|)|]' '$(NF-1) == "paired and reachable" {print $2}'
+kdeconnect-cli --list-devices | awk -F'[-|:|(|)|]' '$(NF-1) == "paired and reachable" {print $3}'
+kdeconnect-cli --list-devices | awk -F'[-|:|(|)|]' '$(NF-1) == "paired and reachable" {print $4}'
+kdeconnect-cli --list-devices | awk -F'[-|:|(|)|]' '$(NF-1) == "paired and reachable" {print $5}'
+kdeconnect-cli --list-devices | awk -F'[-|:|(|)|]' '$(NF-1) == "paired and reachable" {print $1}'
+kdeconnect-cli --list-devices | awk -F'[-|:|(|)]' '$(NF-1) == "paired and reachable" {print $1}'
+kdeconnect-cli --list-devices | awk -F'[-|:|(|)]' '$(NF-1) == "paired and reachable" {print $2}'
+source .bash_funcs
+kdec
+source .bash_funcs
+kdec
+source .bash_funcs
+kdec
+source .bash_funcs
+kdec
+source .bash_funcs
+kdec
+source .bash_funcs
+kdec
+source .bash_funcs
+kdec
+source .bash_funcs
+kdec
+source .bash_funcs
+kdec
+source .bash_funcs
+
+source .bash_funcs
+kdec
+kdec --destination 07472358837
+kdec --destination 07472358837 --send-sms hello
+echo 'hello | awk'
+echo 'hello' | awk
+echo 'hello' | awk 'print $0'
+echo 'hello' | awk 'print $1'
+echo 'hello' | awk {print $1}
+echo 'hello' | awk '{print $1}'
+echo 'hello world \n are you ok' | awk '{print $1}'
+echo 'hello world \n are you ok'
+echo -俄'hello world \n are you ok'
+echo -e 'hello world \n are you ok'
+echo -e 'hello world \n are you ok' | awk '{print $1}'
+echo -e 'hello world \n are you ok' | awk '$1=='hello' {print $1}'
+echo -e 'hello world \n are you ok' | awk '$1=="hello" {print $1}'
+kdeconnect-cli -l
+kdeconnect-cli --list-devices
+kdec
+source .bash_funcs
+sms 
+kdec
+kdeconnect-cli -l
+kdec
+sms 
+sms 07472358837 hello
+sms 07472358837 hello how are you doing
+sms 07472358837 hello how are you doing\?
+source .bash_funcs
+sms 07472358837 hello how are you doing\?
+source .bash_funcs
+sms 07472358837 hello how are you doing\?
+source .bash_funcs
+sms 07472358837 hello how are you doing\?
+source .bash_funcs
+sms 07472358837 hello how are you doing\?
+source .bash_funcs
+sms 07472358837 hello how are you doing\?
+kdec  --destination 07472358837 --send-sms hello how are you doing\?
+source .bash_funcs
+kdec  --destination 07472358837 --send-sms hello how are you doing\?
+source .bash_funcs
+sms 07472358837 hello how are you doing\?
+kdeconnect-cli --device ${device_id} $@
+kdec --send-sms "hello how are you doing \?" --destination 07472358837
+kdec --send-sms hello how are you doing \? --destination 07472358837
+kdeconnect-cli -a
+kdeconnect-cli --device f5fe788a3aa5bc3c --send-sms hello how are you doing \? --destination 07472358837
+kdeconnect-cli 
+kdeconnect-cli --device f5fe788a3aa5bc3c --send-sms testing,please ignore --destination 07472358837
+kdeconnect-cli --device f5fe788a3aa5bc3c --send-sms "testing,please ignore" --destination 07472358837
+kdeconnect-cli --device f5fe788a3aa5bc3c --send-sms "testing,please ignore!" --destination 07472358837
+kdeconnect-cli --device f5fe788a3aa5bc3c --send-sms hello how are you doing ? --destination 07472358837
+kdeconnect-cli --device f5fe788a3aa5bc3c --send-sms "hello how are you doing?" --destination 07472358837
+sms 07472358837 'hello, how are you doing?'
+sms 07472358837 "hello, how are you doing?"
+sms 07472358837 "hello,how are you doing?"
+source .bash_funcs
+sms 07472358837 'hello, how are you doing?'
+sourch .bash_funcs
+source .bash_funcs
+sms 07472358837 'hello, how are you doing?'
+sms 07472358837 hello, how are you doing?
+sms 07472358837 hello, how are you doing? fkejfhefe
+source .bash_funcs
+sms 07472358837 hello, how are you doing? fkejfhefe
+kdec --send-sms "hello, how are you doing? fkejfhefe" --destination 07472358837
+kdeconnect-cli --device f5fe788a3aa5bc3c --send-sms "hello, how are you doing? fkejfhefe" --destination 07472358837
+kdec --send-sms "hello how are you doing? fkejfhefe" --destination 07472358837
+kdec --send-sms "hello, how are you doing? fkejfhefe" --destination 07472358837
+source .bash_funcs
+kdec

@@ -1,16 +1,24 @@
-kdec(){
-	local device_name="$(kdeconnect-cli --list-devices | awk --assign dev_id="${_KDECONNECT_DEFAULT_DEVICE}" -F'[-|:|(|)]' '$(NF - 1) == "paired and reachable" && $(NF - 2) ~ dev_id {print $2}')"
+sms(){
+	local device_name_and_id="$(kdeconnect-cli --list-devices | awk -F'[-|:|(|)]' '$(NF-1) == "paired and reachable" {print $2","$3}')"
+	local device_name device_id
+	IFS=',' read device_name device_id <<< $device_name_and_id	
+
 	if [[ -z "${device_name}" ]]; then
-		echo It seems the default device configured with the env variable _KDECONNECT_DEFAULT_DEVICE \(${_KDECONNECT_DEFAULT_DEVICE}\) is not reachable or not paired > /dev/stderr
+		echo NO DEVICE IS FOUND!!!
 		return
 	else
 		echo Using device:${device_name}
 	fi
-	kdeconnect-cli --device ${_KDECONNECT_DEFAULT_DEVICE} $@
+	
+	local phone_number="$1"
+	shift
+	local msg="$@"
+
+	kdeconnect-cli --device ${device_id} --send-sms "${msg}" --destination "${phone_number}" 	
+	echo Sent SMS Message To ${phone_number} 
 }
 
-
-sms(){
-${_KDECONNECT_DEFAULT_DEVICE}
-	echo ${_KDECONNECT_DEFAULT_DEVICE}
-}
+# A funny mistake happens when I was trying to use kdec() + sms() as described at https://github.com/doronbehar/dotfiles/blob/fef1b6f1e332e75312f491788ae1caae5f832314/.functions
+# The mistake is the way kdec() receive arguments: it uses $@ to connect the function itself with whatever arguments it needs; however, when passing arguments to kdec() from sms(),
+# the kdec() can only receive the first field of messege text.
+# I have not figured out the reason yet.
