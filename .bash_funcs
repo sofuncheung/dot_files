@@ -25,7 +25,7 @@ sms(){
 	IFS=',' read device_name device_id <<< $device_name_and_id	
 
 	if [[ -z "${device_name}" ]]; then
-		echo NO DEVICE IS FOUND!!!
+		echo NO DEVICE IS AVAILABLE!!!
 		return
 	else
 		echo Using device:${device_name}
