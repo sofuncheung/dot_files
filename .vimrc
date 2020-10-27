@@ -44,11 +44,7 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 Plugin 'Vimjas/vim-python-pep8-indent'
-
-
-
-
-
+Plugin 'ycm-core/YouCompleteMe'
 
 
 " Before Installing Vundle
