@@ -75,4 +75,5 @@ set backspace=indent,eol,start
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 vnoremap <Space> zf
 
-
+au BufWinLeave ?* mkview
+au BufWinEnter ?* silent loadview
