@@ -20,7 +20,6 @@ Plugin 'tpope/vim-fugitive'
 " Git plugin not hosted on GitHub
 Plugin 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (i.e. when working on your own plugin)
-Plugin 'file:///home/gmarik/path/to/plugin'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
@@ -45,8 +44,6 @@ filetype plugin indent on    " required
 
 Plugin 'Vimjas/vim-python-pep8-indent'
 Plugin 'ycm-core/YouCompleteMe'
-
-
 " Before Installing Vundle
 
 " configure expanding of tabs for various file types
