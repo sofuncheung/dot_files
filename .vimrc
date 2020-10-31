@@ -54,6 +54,8 @@ au BufRead,BufNewFile Makefile* set noexpandtab
 
 colorscheme torte " color scheme
 
+set noswapfile 
+
 set modeline    
 set modelines=5
 
